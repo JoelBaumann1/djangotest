@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>CRM - Customers</title></head>
+<body>
+    <h1>Customer List</h1>
+    <form method="get">
+        <input type="text" name="q" placeholder="Search..." value="{{ query }}">
+        <button type="submit">Filter</button>
+    </form>
+    <ul>
+        {% for customer in customers %}
+            <li>{{ customer.uservorname }} — {{ customer.userstatus }}</li>
+        {% empty %}
+            <li>No customers found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
