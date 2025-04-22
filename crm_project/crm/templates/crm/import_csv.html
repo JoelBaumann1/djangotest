@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Import CSV</title></head>
+<body>
+    <h1>Import Customers from CSV</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="csv_file" accept=".csv">
+        <button type="submit">Upload</button>
+    </form>
+    <a href="{% url 'customer_list' %}">Back to list</a>
+</body>
+</html>

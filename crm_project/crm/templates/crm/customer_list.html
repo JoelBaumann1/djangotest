@@ -14,5 +14,8 @@
             <li>No customers found.</li>
         {% endfor %}
     </ul>
+<a href="{% url 'export_customers_csv' %}?q={{ query }}">Download Filtered CSV</a>
+<a href="{% url 'import_customers_csv' %}">Import CSV</a>
+
 </body>
 </html>
