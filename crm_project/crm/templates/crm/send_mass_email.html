@@ -1,0 +1,6 @@
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="subject" placeholder="Subject" required><br>
+    <textarea name="message" placeholder="Message" required></textarea><br>
+    <button type="submit">Send Mass Email</button>
+</form>
