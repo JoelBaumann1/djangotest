@@ -9,7 +9,7 @@
     </form>
     <ul>
         {% for customer in customers %}
-            <li>{{ customer.uservorname }} — {{ customer.userstatus }}</li>
+            <li>{{ customer.uservorname }} — {{ customer.userstatus }} - {{ customer.useremail }}</li>
         {% empty %}
             <li>No customers found.</li>
         {% endfor %}

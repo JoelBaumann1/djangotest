@@ -53,7 +53,8 @@ def import_customers_csv(request):
             Customer.objects.create(
                 userid=row['User ID'],
                 uservorname=row['Vorname'],
-                userstatus=row['Status'],
+                userstatus=row['Status']
+
             )
         messages.success(request, 'CSV file imported successfully.')
         return redirect('customer_list')
